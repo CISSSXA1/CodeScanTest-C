@@ -1,4 +1,8 @@
 #!/bin/bash -eu
+set -o pipefail
+set -x
+
+# Rest of the script...
 
 set -o pipefail
 
