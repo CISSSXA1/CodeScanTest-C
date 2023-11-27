@@ -18,14 +18,18 @@ jobs:
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v2
       with:
-        languages: c
+        languages: c-cpp
 
     - name: Build
       run: |
-        ./do-build
+        # Add your custom build commands here
+        mkdir build
+        cd build
+        cmake ..
+        make
       working-directory: ${{ github.workspace }}
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
       with:
-        category: "/language:c"
+        category: "/language:c,c++"
