@@ -22,11 +22,7 @@ jobs:
 
     - name: Build
       run: |
-        # Add your custom build commands here
-        mkdir build
-        cd build
-        cmake ..
-        make
+        ./do-build
       working-directory: ${{ github.workspace }}
 
     - name: Perform CodeQL Analysis
