@@ -74,8 +74,8 @@ jobs:
     - name: Install Dependencies
       run: npm install
   
-    - name: Run Build Application using script
-      run: |
+    
+    - run: |
         echo "Run, Build Application using script"
         ./do-build
 
